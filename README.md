@@ -99,4 +99,24 @@ The backend directory contains the following files and folders:
 ## Security Considerations
 The application implements secure authentication and authorization using JSON Web Tokens (JWT).
 Proper validation and sanitization of user inputs are performed to prevent common web application attacks, such as cross-site scripting (XSS) and SQL injection.
-Contributing
+
+## Key Accpmplishments Achieved
+I wanted to share some of the key accomplishments I achieved during this test project :
+- Keeping the scalability and the security in my mind I decided to use passport.js for authentication and authorization.
+- I used BullMQ along with its Flow-Jobs to provide the user with a seamless experience for its video trans-coding and stream processing.  I used BullMQ workers to run the compute intensive task in the background so that user gets the best experience while using the application.
+- Integrated the bull dashboard as well so that the dev can see and mange the background jobs.
+- Decided to use fluent-ffmpeg for the video trans-coding and streaming processing since it provides so many out of the box features which - can enhance the user experience and the developers workflow.
+- Transcoded the uploaded video into HLS compatible format to allow for adaptive bit rate compliance following the industry standards for a media streaming server.
+- Used the express-json-validator-middleware which is an abstraction on AJV , and provides one of the fastest schema validations and scalability.
+- For the front-end I decided to use React since it offers a component-based architecture, virtual DOM, unidirectional data flow, large community and ecosystem, and cross-platform support for building modern web applications.
+- I integrated Redux toolkit since it is one of the best state management library along with high scalability as well.
+- RTK Query was also used which allows us to update our stored state by polling the server for any updated values to provide the user with real-time-updates.
+- For the styling I used TailwindCSS to give life to the web application so that it is appealing to the end user.
+- Used proper separations of concerns by delegating our state management and server queries separately. (Redux toolkit and RTK query)
+- Furthermore I used the PLYR react video player and configured it to make it compatible with HLS, which handles on the fly quality changes depending on your internet connection as well as handling the buffer amount.
+
+## Improvements
+- We can go with a micro service architecture approach to improve the future scalability.
+- We can use Amazon CloudFront media streaming for low latency video on demand.
+- We can use PM2 module to horizontally scale our Nodejs application so that we can fully utilise our instance resources.
+
